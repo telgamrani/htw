@@ -4,10 +4,10 @@ import { LookService } from '../services/look.service'
 
 @Component({
   selector: 'app-look',
-  templateUrl: './look.component.html',
-  styleUrls: ['./look.component.css']
+  templateUrl: './looks.component.html',
+  styleUrls: ['./looks.component.css']
 })
-export class LookComponent implements OnInit {
+export class LooksComponent implements OnInit {
 
   looks: Look[];
 

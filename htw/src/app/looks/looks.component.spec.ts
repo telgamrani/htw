@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LookComponent } from './look.component';
+import { LooksComponent } from './looks.component';
 
-describe('LookComponent', () => {
-  let component: LookComponent;
-  let fixture: ComponentFixture<LookComponent>;
+describe('LooksComponent', () => {
+  let component: LooksComponent;
+  let fixture: ComponentFixture<LooksComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LookComponent ]
+      declarations: [ LooksComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LookComponent);
+    fixture = TestBed.createComponent(LooksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
