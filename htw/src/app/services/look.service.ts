@@ -21,4 +21,9 @@ export class LookService {
     return this.http.get<Look[]>(this.looksUrl);
   }
 
+  getLook(id: number) {
+    const url = `${this.looksUrl}/${id}`;
+    return this.http.get<Look>(url);
+  }
+
 }

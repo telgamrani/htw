@@ -1,0 +1,41 @@
+<div class="container" *ngIf="look">
+    <div class="row">
+        <div class="col-12">
+            <div id="look-detail">
+                <div class="detail-item-head">
+                    <img [src]="look.urlLookImg"/>
+                </div>
+
+                <div class="detail-item-body">
+                    <div class="detail-item-two" *ngFor="let article of look.principalsArticles; let index = index; let even = even">
+                        <div *ngIf="even" class="detail-item-body-element left-img">
+                            <img *ngIf="look.principalsArticles[index]" [src]="look.principalsArticles[index].urlArticleImg"><h5 *ngIf="look.principalsArticles[index]" class="item-price">{{look.principalsArticles[index].price}} {{look.principalsArticles[index].currency}}</h5>
+                            <button type="button" class="btn btn-light btn-light-shopping-site-link">Voir sur Amazon</button>
+                        </div>
+                        <div *ngIf="even" class="detail-item-body-element">
+                            <img *ngIf="look.principalsArticles[index+1]" [src]="look.principalsArticles[index+1].urlArticleImg"><h5 *ngIf="look.principalsArticles[index+1]" class="item-price">{{look.principalsArticles[index+1].price}} {{look.principalsArticles[index+1].currency}}</h5>
+                            <button type="button" class="btn btn-light btn-light-shopping-site-link">Voir sur Amazon</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row more-choice">
+            <div class="col-12 ">
+                <h1> Plus de choix </h1>
+            </div>
+        </div>
+
+        <div class="row"> 
+            <div class="col-3 col-item-detail" *ngFor="let article of look.moreArticles; let index = index">
+                <div class="item-detail">
+                    <img [src]="article.urlArticleImg"><h5 class="item-price">{{article.price}} {{article.currency}}</h5>
+                    <button type="button" class="btn btn-light btn-light-shopping-site-link">Voir sur Amazon</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

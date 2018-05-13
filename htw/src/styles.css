@@ -260,6 +260,10 @@ div.detail-item-two {
 /* 	body {
 		background-color: red;
 	} */
+	.more-choice {
+		width: 100%;
+		text-align: center;
+	}
 	.more-choice h1 {
 		font-size: 0.5em;
 	}

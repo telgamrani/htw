@@ -3,7 +3,7 @@ import { Look } from '../models/look'
 import { LookService } from '../services/look.service'
 
 @Component({
-  selector: 'app-look',
+  selector: 'app-looks',
   templateUrl: './looks.component.html',
   styleUrls: ['./looks.component.css']
 })

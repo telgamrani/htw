@@ -1,11 +1,26 @@
-<p>
-  look works!
-</p>
-<div *ngFor="let look of looks">
-  <p>{{look.id}} - {{look.urlLookImg}}</p>
-  <ul *ngFor="let article of look.principalsArticles">
-    <li>
-      {{article.id}} - {{article.urlArticleImg}}
-    </li>
-  </ul>
+<div class="container" *ngIf="looks">
+  <div class="row"> 
+      <div class="column">
+
+  				<div class="list-item" *ngFor="let look of looks"> 
+              <a href="./detail.html">
+                <div class="list-item-head">
+                  <img [src]="look.urlLookImg"/>
+                </div>
+                <div class="list-item-body">
+                  <div class="list-item-two" *ngFor="let article of look.principalsArticles; let index = index; let even = even">
+                    <div *ngIf="even" class="list-item-body-element left-img">
+                      <img [src]="article.urlArticleImg"><h5 class="item-price">{{article.price}} {{article.currency}}</h5>
+                    </div>
+                    <div *ngIf="even" class="list-item-body-element">
+                        <img *ngIf="look.principalsArticles[index+1]" [src]="look.principalsArticles[index+1].urlArticleImg"><h5 *ngIf="look.principalsArticles[index+1]" class="item-price">{{look.principalsArticles[index+1].price}} {{look.principalsArticles[index+1].currency}}</h5>
+                    </div>
+                  </div>
+                  <div class="show-detail">Detail</div>
+                </div>
+              </a>
+            </div>
+
+      </div>
+    </div>
 </div>

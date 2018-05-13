@@ -8,13 +8,15 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { LooksComponent } from './looks/looks.component';
 
 import { LookService } from './services/look.service';
-import { InMemoryDataService } from './services/in-memory-data-service'
+import { InMemoryDataService } from './services/in-memory-data-service';
+import { LookComponent } from './look/look.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationBarComponent,
-    LooksComponent
+    LooksComponent,
+    LookComponent
   ],
   imports: [
     BrowserModule,
