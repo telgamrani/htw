@@ -9,7 +9,8 @@ import { LooksComponent } from './looks/looks.component';
 
 import { LookService } from './services/look.service';
 import { InMemoryDataService } from './services/in-memory-data-service';
-import { LookComponent } from './look/look.component'
+import { LookComponent } from './look/look.component';
+import { AppRoutingModule } from './/app-routing.module'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LookComponent } from './look/look.component'
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false}
-    )
+    ),
+    AppRoutingModule
   ],
   providers: [LookService],
   bootstrap: [AppComponent]

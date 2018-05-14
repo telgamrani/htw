@@ -80,6 +80,36 @@ export class InMemoryDataService implements InMemoryDbService{
                         urlArticleImg: "assets/img/look/chemise/01.jpg",
                         price: "25,99",
                         currency: "€"
+                    },
+                    {
+                        id: 6,
+                        urlArticleImg: "assets/img/look/chemise/01.jpg",
+                        price: "25,99",
+                        currency: "€"
+                    },
+                    {
+                        id: 6,
+                        urlArticleImg: "assets/img/look/chemise/01.jpg",
+                        price: "25,99",
+                        currency: "€"
+                    },
+                    {
+                        id: 6,
+                        urlArticleImg: "assets/img/look/chemise/01.jpg",
+                        price: "25,99",
+                        currency: "€"
+                    },
+                    {
+                        id: 6,
+                        urlArticleImg: "assets/img/look/chemise/01.jpg",
+                        price: "25,99",
+                        currency: "€"
+                    },
+                    {
+                        id: 6,
+                        urlArticleImg: "assets/img/look/chemise/01.jpg",
+                        price: "25,99",
+                        currency: "€"
                     }
                 ],
             },

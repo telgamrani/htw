@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
 import { Look } from '../models/look';
 import { LookService } from "../services/look.service"
 
@@ -11,14 +12,17 @@ export class LookComponent implements OnInit {
 
   look: Look;
 
-  constructor(private lookService: LookService) { }
+  constructor(
+    private lookService: LookService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
     this.getLook();
   }
 
   getLook(): void {
-    const id = 2;  // TODO : a dynamiser
+    const id = +this.route.snapshot.paramMap.get('id');
     this.lookService.getLook(id).subscribe(look => this.look = look);
   }
 

@@ -3,7 +3,7 @@
       <div class="column">
 
   				<div class="list-item" *ngFor="let look of looks"> 
-              <a href="./detail.html">
+              <a routerLink="/look/{{look.id}}">
                 <div class="list-item-head">
                   <img [src]="look.urlLookImg"/>
                 </div>
